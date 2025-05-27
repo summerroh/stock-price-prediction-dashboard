@@ -6,6 +6,12 @@
 
 A modern React-based dashboard for visualizing and comparing stock price prediction models. This dashboard provides an intuitive interface for analyzing and comparing different prediction models' performance across various stocks.
 
+> This project was developed as part of the Summer Internship Program at Macquarie University, Sydney, Australia.
+
+## 👨‍💻 Dashboard Builder
+
+- **Sunkyoung Roh** - [GitHub](https://github.com/summerroh)
+
 ## ✨ Features
 
 - 📊 Interactive model selection and comparison
@@ -26,7 +32,7 @@ A modern React-based dashboard for visualizing and comparing stock price predict
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/stock-price-prediction-dashboard.git
+git clone https://github.com/summerroh/stock-price-prediction-dashboard.git
 cd stock-price-prediction-dashboard
 ```
 
@@ -75,4 +81,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/yourusername/stock-price-prediction-dashboard/issues).
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/summerroh/stock-price-prediction-dashboard/issues).
