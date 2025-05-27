@@ -1,0 +1,53 @@
+<svg width="100%" height="auto" viewBox="0 0 1600 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#000" flood-opacity="0.22"/>
+    </filter>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#b0b8c1"/>
+    </marker>
+  </defs>
+  <style>
+    .layer-text {
+      font: 600 36px 'Inter', 'SF Pro Display', 'Segoe UI', Arial, sans-serif;
+      fill: #fff;
+      text-align: center;
+      dominant-baseline: middle;
+    }
+    .rect {
+      fill: #35363a;
+      filter: url(#shadow);
+      stroke: #232427;
+      stroke-width: 3;
+      rx: 48;
+      opacity: 0.99;
+    }
+    .arrow { stroke: #b0b8c1; stroke-width: 2.5; marker-end: url(#arrowhead); }
+    .fo-div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      color: #fff;
+      font-weight: 600;
+      font-size: 32px;
+      text-align: center;
+      line-height: 1.2;
+      word-break: break-word;
+    }
+  </style>
+  <!-- LSTM Layer -->
+  <rect class="rect" x="60" y="80" width="700" height="200" rx="48"/>
+  <foreignObject x="60" y="80" width="700" height="200">
+    <div class="fo-div" xmlns="http://www.w3.org/1999/xhtml">LSTM<br/>(lstm_units,<br/>return_sequences=False,<br/>name='lstm_layer')</div>
+  </foreignObject>
+  <!-- Arrow -->
+  <line class="arrow" x1="760" y1="180" x2="900" y2="180"/>
+  <!-- Dense Output -->
+  <rect class="rect" x="900" y="80" width="700" height="200" rx="48"/>
+  <foreignObject x="900" y="80" width="700" height="200">
+    <div class="fo-div" xmlns="http://www.w3.org/1999/xhtml">Dense<br/>(num_tickers,<br/>name='dense_output')</div>
+  </foreignObject>
+</svg> 

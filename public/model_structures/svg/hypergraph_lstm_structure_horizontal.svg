@@ -1,0 +1,67 @@
+<svg width="100%" height="auto" viewBox="0 0 2500 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#000" flood-opacity="0.22"/>
+    </filter>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#b0b8c1"/>
+    </marker>
+  </defs>
+  <style>
+    .layer-text {
+      font: 600 36px 'Inter', 'SF Pro Display', 'Segoe UI', Arial, sans-serif;
+      fill: #fff;
+      text-align: center;
+      dominant-baseline: middle;
+    }
+    .rect {
+      fill: #35363a;
+      filter: url(#shadow);
+      stroke: #232427;
+      stroke-width: 3;
+      rx: 48;
+      opacity: 0.99;
+    }
+    .arrow { stroke: #b0b8c1; stroke-width: 2.5; marker-end: url(#arrowhead); }
+    .fo-div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      color: #fff;
+      font-weight: 600;
+      font-size: 36px;
+      text-align: center;
+      line-height: 1.2;
+      word-break: break-word;
+    }
+  </style>
+  <!-- LSTM 128 -->
+  <rect class="rect" x="60" y="80" width="600" height="240" rx="48"/>
+  <foreignObject x="60" y="80" width="600" height="240">
+    <div class="fo-div" xmlns="http://www.w3.org/1999/xhtml">LSTM (128,<br/>return_sequences=True,<br/>input_shape=(x_train.shape[1],<br/>x_train.shape[2]))</div>
+  </foreignObject>
+  <!-- Arrow 1 -->
+  <line class="arrow" x1="660" y1="210" x2="900" y2="210"/>
+  <!-- LSTM 64 -->
+  <rect class="rect" x="900" y="80" width="400" height="240" rx="48"/>
+  <foreignObject x="900" y="80" width="400" height="240">
+    <div class="fo-div" xmlns="http://www.w3.org/1999/xhtml">LSTM<br/>(64,<br/>return_sequences=False)</div>
+  </foreignObject>
+  <!-- Arrow 2 -->
+    <line class="arrow" x1="1300" y1="210" x2="1500" y2="210"/>
+  <!-- Dense 25 -->
+  <rect class="rect" x="1500" y="80" width="300" height="240" rx="48"/>
+  <foreignObject x="1500" y="80" width="300" height="240">
+    <div class="fo-div" xmlns="http://www.w3.org/1999/xhtml">Dense<br/>(25)</div>
+  </foreignObject>
+  <!-- Arrow 3 -->
+  <line class="arrow" x1="1800" y1="210" x2="2000" y2="210"/>
+  <!-- Dense len(tickers) -->
+  <rect class="rect" x="2000" y="80" width="400" height="240" rx="48"/>
+  <foreignObject x="2000" y="80" width="400" height="240">
+    <div class="fo-div" xmlns="http://www.w3.org/1999/xhtml">Dense<br/>(len(tickers))</div>
+  </foreignObject>
+</svg> 

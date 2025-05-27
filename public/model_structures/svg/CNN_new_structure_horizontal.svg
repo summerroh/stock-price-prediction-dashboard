@@ -1,0 +1,80 @@
+<svg width="100%" height="auto" viewBox="0 0 2400 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#000" flood-opacity="0.22"/>
+    </filter>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#b0b8c1"/>
+    </marker>
+  </defs>
+  <style>
+    .layer-text {
+      font: 600 32px 'Inter', 'SF Pro Display', 'Segoe UI', Arial, sans-serif;
+      fill: #fff;
+      text-align: center;
+      dominant-baseline: middle;
+    }
+    .rect {
+      fill: #35363a;
+      filter: url(#shadow);
+      stroke: #232427;
+      stroke-width: 3;
+      rx: 48;
+      opacity: 0.99;
+    }
+    .arrow { stroke: #b0b8c1; stroke-width: 2.5; marker-end: url(#arrowhead); }
+    .fo-div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      color: #fff;
+      font-weight: 600;
+      font-size: 32px;
+      text-align: center;
+      line-height: 1.2;
+      word-break: break-word;
+    }
+  </style>
+  <!-- Dropout -->
+  <rect class="rect" x="60" y="80" width="320" height="120" rx="48"/>
+  <foreignObject x="60" y="80" width="320" height="120">
+    <div class="fo-div" xmlns="http://www.w3.org/1999/xhtml">Dropout<br/>(Dropout(0.2))</div>
+  </foreignObject>
+  <!-- Arrow 1 -->
+  <line class="arrow" x1="380" y1="140" x2="480" y2="140"/>
+  <!-- Flatten -->
+  <rect class="rect" x="480" y="80" width="320" height="120" rx="48"/>
+  <foreignObject x="480" y="80" width="320" height="120">
+    <div class="fo-div" xmlns="http://www.w3.org/1999/xhtml">Flatten<br/>(Flatten())</div>
+  </foreignObject>
+  <!-- Arrow 2 -->
+  <line class="arrow" x1="800" y1="140" x2="950" y2="140"/>
+  <!-- Dense 128 -->
+  <rect class="rect" x="950" y="60" width="400" height="160" rx="48"/>
+  <foreignObject x="950" y="60" width="400" height="160">
+    <div class="fo-div" xmlns="http://www.w3.org/1999/xhtml">
+      Dense<br/>(128,<br/>activation='relu')
+    </div>
+  </foreignObject>
+  <!-- Arrow 3 -->
+  <line class="arrow" x1="1350" y1="140" x2="1500" y2="140"/>
+  <!-- Dense 50 -->
+  <rect class="rect" x="1500" y="80" width="320" height="120" rx="48"/>
+  <foreignObject x="1500" y="80" width="320" height="120">
+    <div class="fo-div" xmlns="http://www.w3.org/1999/xhtml">
+      Dense<br/>(50,<br/>activation='relu')
+    </div>
+  </foreignObject>
+  <!-- Arrow 4 -->
+  <line class="arrow" x1="1820" y1="140" x2="1920" y2="140"/>
+  <!-- Dense len(tickers) -->
+  <rect class="rect" x="1920" y="60" width="400" height="160" rx="48"/>
+  <foreignObject x="1920" y="60" width="400" height="160">
+    <div class="fo-div" xmlns="http://www.w3.org/1999/xhtml">
+      Dense<br/>(len(tickers),<br/>activation='linear')
+    </div>
+  </foreignObject>
+</svg>

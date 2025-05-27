@@ -1,0 +1,33 @@
+<svg width="1000" height="800" viewBox="0 0 1000 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#000" flood-opacity="0.22"/>
+    </filter>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#b0b8c1"/>
+    </marker>
+  </defs>
+  <style>
+    .layer { font: 600 42px 'Inter', Arial, sans-serif; fill: #fff; }
+    .rect {
+      fill: #35363a;
+      filter: url(#shadow);
+      stroke: #232427;
+      stroke-width: 3;
+      rx: 48;
+      opacity: 0.99;
+    }
+    .arrow { stroke: #b0b8c1; stroke-width: 2.5; marker-end: url(#arrowhead); }
+  </style>
+  <!-- LSTM Layer -->
+  <rect class="rect" x="80" y="40" width="900" height="180" rx="48"/>
+  <text class="layer" x="500" y="100" text-anchor="middle">LSTM(lstm_units,</text>
+  <text class="layer" x="500" y="150" text-anchor="middle">return_sequences=False,</text>
+  <text class="layer" x="500" y="200" text-anchor="middle">name='lstm_layer')</text>
+  <!-- Arrow -->
+  <line class="arrow" x1="500" y1="220" x2="500" y2="380"/>
+  <!-- Dense Output -->
+  <rect class="rect" x="80" y="400" width="900" height="160" rx="48"/>
+  <text class="layer" x="500" y="450" text-anchor="middle">Dense(num_tickers,</text>
+  <text class="layer" x="500" y="500" text-anchor="middle">name='dense_output')</text>
+</svg> 

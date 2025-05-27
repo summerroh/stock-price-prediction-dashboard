@@ -1,0 +1,42 @@
+<svg width="2800" height="2400" viewBox="0 0 2800 2400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#000" flood-opacity="0.22"/>
+    </filter>
+    <marker id="arrowhead" markerWidth="16" markerHeight="14" refX="16" refY="7" orient="auto">
+      <polygon points="0 0, 16 7, 0 14" fill="#b0b8c1"/>
+    </marker>
+  </defs>
+  <style>
+    .layer { font: 600 96px 'Inter', 'SF Pro Display', 'Segoe UI', Arial, sans-serif; fill: #fff; }
+    .rect {
+      fill: #35363a;
+      filter: url(#shadow);
+      stroke: #232427;
+      stroke-width: 6;
+      rx: 100;
+      opacity: 0.99;
+    }
+    .arrow { stroke: #b0b8c1; stroke-width: 5; marker-end: url(#arrowhead); }
+  </style>
+  <!-- LSTM 128 -->
+  <rect class="rect" x="120" y="80" width="2560" height="320" rx="100"/>
+  <text class="layer" x="1400" y="240" text-anchor="middle">LSTM(128, return_sequences=True,</text>
+  <text class="layer" x="1400" y="360" text-anchor="middle">input_shape=(x_train.shape[1], x_train.shape[2]))</text>
+  <!-- Arrow 1 -->
+  <line class="arrow" x1="1400" y1="400" x2="1400" y2="720"/>
+  <!-- LSTM 64 -->
+  <rect class="rect" x="320" y="720" width="2160" height="320" rx="100"/>
+  <text class="layer" x="1400" y="840" text-anchor="middle">LSTM(64,</text>
+  <text class="layer" x="1400" y="960" text-anchor="middle">return_sequences=False)</text>
+  <!-- Arrow 2 -->
+  <line class="arrow" x1="1400" y1="1040" x2="1400" y2="1360"/>
+  <!-- Dense 25 -->
+  <rect class="rect" x="500" y="1360" width="1800" height="320" rx="100"/>
+  <text class="layer" x="1400" y="1520" text-anchor="middle" dominant-baseline="middle">Dense(25)</text>
+  <!-- Arrow 3 -->
+  <line class="arrow" x1="1400" y1="1680" x2="1400" y2="2000"/>
+  <!-- Dense len(tickers) -->
+  <rect class="rect" x="350" y="2000" width="2100" height="320" rx="100"/>
+  <text class="layer" x="1400" y="2160" text-anchor="middle" dominant-baseline="middle">Dense(len(tickers))</text>
+</svg> 

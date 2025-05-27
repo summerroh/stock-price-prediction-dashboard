@@ -1,0 +1,45 @@
+<svg width="700" height="900" viewBox="0 0 700 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#000" flood-opacity="0.22"/>
+    </filter>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#b0b8c1"/>
+    </marker>
+  </defs>
+  <style>
+    .layer { font: 600 36px 'Inter', 'SF Pro Display', 'Segoe UI', Arial, sans-serif; fill: #fff; }
+    .rect {
+      fill: #35363a;
+      filter: url(#shadow);
+      stroke: #232427;
+      stroke-width: 3;
+      rx: 48;
+      opacity: 0.99;
+    }
+    .arrow { stroke: #b0b8c1; stroke-width: 2.5; marker-end: url(#arrowhead); }
+  </style>
+  <!-- Dropout -->
+  <rect class="rect" x="120" y="60" width="460" height="110" rx="48"/>
+  <text class="layer" x="350" y="125" text-anchor="middle">Dropout(Dropout(0.2))</text>
+  <!-- Arrow 1 -->
+  <line class="arrow" x1="350" y1="170" x2="350" y2="230"/>
+  <!-- Flatten -->
+  <rect class="rect" x="160" y="230" width="380" height="110" rx="48"/>
+  <text class="layer" x="350" y="295" text-anchor="middle">Flatten(Flatten())</text>
+  <!-- Arrow 2 -->
+  <line class="arrow" x1="350" y1="340" x2="350" y2="400"/>
+  <!-- Dense 128 -->
+  <rect class="rect" x="80" y="400" width="540" height="110" rx="48"/>
+  <text class="layer" x="350" y="465" text-anchor="middle">Dense(128, activation='relu')</text>
+  <!-- Arrow 3 -->
+  <line class="arrow" x1="350" y1="510" x2="350" y2="570"/>
+  <!-- Dense 50 -->
+  <rect class="rect" x="80" y="570" width="540" height="110" rx="48"/>
+  <text class="layer" x="350" y="635" text-anchor="middle">Dense(50, activation='relu')</text>
+  <!-- Arrow 4 -->
+  <line class="arrow" x1="350" y1="680" x2="350" y2="740"/>
+  <!-- Dense len(tickers) -->
+  <rect class="rect" x="10" y="740" width="680" height="110" rx="48"/>
+  <text class="layer" x="350" y="805" text-anchor="middle">Dense(len(tickers), activation='linear')</text>
+</svg>
